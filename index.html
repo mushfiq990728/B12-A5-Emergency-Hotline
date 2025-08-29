@@ -22,7 +22,7 @@
 
    
 </head>
-<!-- max-w-xl mx-auto h-[200vh] bg-[#fafafa] -->
+
 <body class="">
     <!-- navbar -->
      <div class="parent-nav flex justify-between items-center my-[10px] mx-[100px]">
@@ -39,13 +39,13 @@
           
   
             <button class="border rounded-2xl bg-[#d4d8d5] h-[50px] w-[80px] flex justify-center items-center gap-1.5">
-              <p>0</p>
+              <p id="heart-count">0</p>
               <img class="h-[30px]" src="assets/heart.png" alt="">
             </button>
           </div>
           <div class="star">
             <button class="border rounded-2xl bg-[#d4d8d5] h-[50px] w-[80px] flex justify-center items-center gap-1.5">
-              <p>0</p>
+              <p id="coin-count" class="text-white">0</p> 
               <img class="h-[30px]" src="assets/coin.png" alt="">
             </button>
           </div>
@@ -85,14 +85,15 @@
         <p class="border rounded-2xl border-white bg-[#d4d8d5] text-center max-w-[40px] max-h-[60px]">All</p>
         </div>
         <div class="flex">
-          <button class="ml-[15px] mt-[10px] mb-[15px] text-center border-1  rounded-2xl w-[150px] h-[50px] flex justify-center items-center">
-            <i class="fa-solid fa-copy"></i>
-            <p>Copy</p>
-          </button>
-          <button class="ml-[15px] mt-[10px] mb-[15px] text-center border-2 border-white rounded-2xl bg-[#00a63e] w-[150px] h-[50px] flex justify-center items-center gap-2">
-          <i class="fa-solid fa-phone text-white"></i>
-          <p class="text-white">Call</p>
-          </button>
+          <button class="copy-btn ml-[15px] mt-[10px] mb-[15px] text-center border-1 rounded-2xl w-[150px] h-[50px] flex justify-center items-center" data-number="999">
+        <i class="fa-solid fa-copy"></i>
+        <p>Copy</p>
+       </button>
+
+          <button class="call-btn ml-[15px] mt-[10px] mb-[15px] text-center border-2 border-white rounded-2xl w-[150px] h-[50px] flex justify-center items-center gap-2 bg-[#00a63e]">
+  <i class="fa-solid fa-phone text-white"></i>
+  <p class="text-white">Call</p>
+</button>
         </div>
       </div>
       
@@ -339,13 +340,13 @@
       <i class="fa-regular fa-clock text-gray-600"></i>
       <h2 class="text-lg font-semibold">Call History</h2>
     </div>
-    <button class="bg-green-500 text-white px-4 py-1 rounded-lg hover:bg-green-600 transition">
-      Clear
-    </button>
+    <button id="clear-history" class="bg-green-500 text-white px-4 py-1 rounded-lg hover:bg-green-600 transition">
+  Clear
+</button>
   </div>
 
   
-  <div class="space-y-3 max-h-[500px] overflow-y-auto">
+  <div id="call-history" class="space-y-3 max-h-[500px] overflow-y-auto">
     
     
     <div class="flex items-center justify-between bg-gray-50 rounded-lg p-3 shadow-sm">
